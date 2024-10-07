@@ -1,0 +1,27 @@
+@if (isAddingTask) {
+  <app-new-task (close)="onClose()" />
+}
+
+<section>
+  <header class="flex flex-row items-center justify-between">
+    <h1>{{ title }}</h1>
+    <menu>
+      <button
+        class="flex flex-row items-center gap-2 rounded-md border border-gray-300 px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-600"
+        (click)="onAddTask()"
+      >
+        Add Task
+      </button>
+    </menu>
+  </header>
+
+  <div>
+    <ul class="flex flex-col gap-1">
+      @for (task of selectedUserTasks; track task.id) {
+      <li>
+        <app-task [task]="task" (delete)="onDelete($event)"></app-task>
+      </li>
+      }
+    </ul>
+  </div>
+</section>

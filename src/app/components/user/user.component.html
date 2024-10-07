@@ -1,0 +1,14 @@
+<div>
+  <button
+    class="flex w-full flex-row items-center gap-2 rounded-md border border-gray-300 px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-600"
+    (click)="onClick()"
+  >
+    <img
+      src="https://avatars.githubusercontent.com/u/10026466?v=4"
+      alt=""
+      class="h-6 w-6 rounded-full"
+    />
+    <span>{{ name }}</span>
+    <span>{{ signalName() }}</span>
+  </button>
+</div>
