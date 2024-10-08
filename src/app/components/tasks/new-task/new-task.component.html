@@ -2,7 +2,7 @@
 class="w-screen h-screen top-0 left-0 bg-black absolute opacity-60"></div>
 <dialog open class="border rounded-md px-16 py-8">
     <h2 class="text-lg font-bold mb-8">Add Task</h2>
-    <form class="flex flex-col gap-6 w-full">
+    <form (ngSubmit)="onSubmit()" class="flex flex-col gap-6 w-full">
         <p class="flex flex-col">
             <label for="title">Title</label>
             <input [(ngModel)]="title" type="text" id="title" name="title" class="border p-1 rounded-md" />
@@ -21,7 +21,7 @@ class="w-screen h-screen top-0 left-0 bg-black absolute opacity-60"></div>
                 class="flex flex-row items-center gap-2 rounded-md border border-gray-300 px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-600">
                 Cancel
             </button>
-            <button type="submit" (click)="onAdd()"
+            <button type="submit"
                 class="flex flex-row items-center gap-2 rounded-md border border-gray-300 px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-600">
                 Create
             </button>

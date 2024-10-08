@@ -5,12 +5,8 @@
     <ul class="flex flex-col gap-1">
       @for (user of users; track user.id) {
       <li>
-        <app-user
-          [user]="user"
-          [selected]="selectedUser?.id === user.id"
-          [signalName]="user.name"
-          (select)="onSelectUser($event)"
-        ></app-user>
+        <app-user [user]="user" [selected]="selectedUser?.id === user.id" [signalName]="user.name"
+          (select)="onSelectUser($event)"></app-user>
       </li>
       }
     </ul>
